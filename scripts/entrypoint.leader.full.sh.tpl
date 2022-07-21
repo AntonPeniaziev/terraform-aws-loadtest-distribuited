@@ -14,9 +14,14 @@ export BZT_VERSION="1.16.0"
 sudo pip3 install bzt==$BZT_VERSION
 
 # LOCUST
-export LOCUST_VERSION="2.9.0"
+export LOCUST_VERSION="2.10.1"
 sudo pip3 install locust==$LOCUST_VERSION
-
+echo y | sudo yum install postgresql postgresql-devel python-devel
+sudo yum install -y amazon-linux-extras
+sudo amazon-linux-extras install postgresql10
+sudo yum install -y amazon-linux-extras
+sudo pip3 install psycopg2=="2.9.3"
+sudo pip3 install boto3=="1.24.32"
 # JMETER
 export MIRROR_HOST=https://archive.apache.org/dist/jmeter
 export JMETER_VERSION="5.4.1"
